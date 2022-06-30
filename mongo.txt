@@ -1,0 +1,105 @@
+////Setup db local/////
+> Download & Install
+(https://www.mongodb.com/try/download/community)
+> Install mongodb Compass
+(https://www.mongodb.com/try/download/compass)
+
+/////Window/////
+> inside C drive make folder data   > C:\data
+> inside data make folder db  > C:\data\db
+
+////How to start mongo server////
+> open cmd
+> go inside mongodb bin folder (C:\Program Files\Server\5.2\bin)
+> mongod
+(this will start mongodb server)
+
+////How to start mongo client////
+> open new cmd (dont close the server Cmd)
+> go inside mongodb bin folder (C:\Program Files\Server\5.2\bin)
+> mongo
+(here we will test the query)
+
+////Mac/Linux
+> open terminal 
+> mkdir data/db
+
+////How to start mongo server////
+> open terminal 
+> mongod --dbpath data/db
+
+////How to start mongo client////
+> open terminal 
+> mongo
+
+//////////////////////
+SQL       NoSQL
+
+RollNO | Hindi | English |
+  1    |   80  |         |
+  2    |       |  75     |
+  3    |   87  |         |
+
+  [
+    {
+        rollNo:1,
+        Hindi:80,
+        computer:78
+    },
+    {
+        rollNo:2,
+        English:75
+    },
+    {
+        rollNo:3,
+        Hindi:87
+    },
+  ]
+
+
+SQL         NoSQL
+Database    Database
+Table       Collections
+row         Document
+Select      find
+Insert      insert
+Delete      remove
+update      update
+
+
+Default Port > 27017
+
+>>>>>>Show All DBs<<<<<<<<
+> show dbs
+
+>>>>Go Inside Db
+> use databasename
+
+>>>>See Collections
+> show collections
+
+>>>>Find all records
+> db.collectionName.find()
+> db.products.find().pretty() //only for console not code
+
+////Creating Database
+use dbname
+
+////insert data
+db.collectionName.insert({"name":"Latika"})
+
+////////////////////////////////
+_id > object Id
+> every record will have _id
+> primaryKey & unique with each record
+
+12byte 
+5 bytes (Random Number)
+3 bytes (Series)
+4 byte  (timestamp)
+
+///////////////////////////////////
+Find on basis of condition
+
+db.products.find({'product_name':"Women's Jeans"}).pretty()
+db.products.find({'product_name':"Women's Jeans",Size:'L'}).pretty()
